@@ -354,6 +354,28 @@
     .scroll-top:hover{background:var(--gold);color:var(--navy)}
 
     /* ============================
+       WHAT WE TEACH
+    ============================ */
+    .what-teach{background:var(--cream)}
+    .teach-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:38px}
+    .teach-item{display:flex;align-items:center;gap:14px;background:#fff;border-radius:var(--r);padding:18px 22px;border:1px solid var(--border);box-shadow:0 4px 16px rgba(13,27,62,.06);transition:var(--tr)}
+    .teach-item:hover{border-color:var(--gold);box-shadow:var(--shadow-gold);transform:translateY(-2px)}
+    .teach-icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--navy-light));display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:18px;flex-shrink:0}
+    .teach-item span{font-size:.92rem;font-weight:600;color:var(--navy)}
+    .teach-wide{grid-column:span 2}
+
+    /* ============================
+       WHO IS THIS FOR
+    ============================ */
+    .who-for{background:#fff}
+    .who-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:38px}
+    .who-card{border-radius:var(--rl);padding:26px 22px;display:flex;align-items:flex-start;gap:16px;border:2px solid var(--border);transition:var(--tr)}
+    .who-card:hover{border-color:var(--gold);box-shadow:var(--shadow-gold);transform:translateY(-4px)}
+    .who-num{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);font-weight:800;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+    .who-card h4{font-size:.92rem;color:var(--navy);margin-bottom:5px;font-weight:700}
+    .who-card p{font-size:.82rem;color:var(--text-mid);line-height:1.58}
+
+    /* ============================
        RESPONSIVE
     ============================ */
     @media(max-width:1100px){
@@ -385,6 +407,8 @@
       .about-float{margin-left:0}
       .fg input,.fg select,.fg textarea{font-size:1rem}
       .cta-banner h2{max-width:100%}
+      .teach-list,.who-grid{grid-template-columns:1fr}
+      .teach-wide{grid-column:span 1}
     }
     @media(max-width:480px){
       section{padding:46px 0}
@@ -481,13 +505,11 @@
       <div data-aos="fade-up" data-aos-duration="800">
 
         <h1 class="hero-title">
-          Strong Foundations Today,
-          <span class="hi">Brighter Futures Tomorrow.</span>
+          Building Confident Young Learners
+          <span class="hi">Through Interactive Online Classes</span>
         </h1>
         <p class="hero-desc">
-          Empowering Arabic-speaking children to think, learn and succeed globally.
-          Give your child the skills and confidence they need to excel in school,
-          communicate with the world, and achieve their dreams.
+          English &bull; Science &bull; Math &bull; Communication Skills &nbsp;(Ages 7&ndash;14)
         </p>
         <div class="hero-btns">
           <a href="#contact" class="btn btn-gold"><i class="fas fa-rocket"></i> Start Your Journey</a>
@@ -531,6 +553,84 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     WHAT WE TEACH
+============================== -->
+<section class="what-teach">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <span class="tag">What We Teach</span>
+      <h2 class="title">We Help Students <span>Improve In</span></h2>
+      <p class="sub">Structured, interactive online classes focused on the subjects that matter most for school success.</p>
+    </div>
+    <div class="teach-list">
+      <div class="teach-item" data-aos="fade-up" data-aos-delay="50">
+        <div class="teach-icon"><i class="fas fa-book-reader"></i></div>
+        <span>English Reading &amp; Speaking</span>
+      </div>
+      <div class="teach-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="teach-icon"><i class="fas fa-flask"></i></div>
+        <span>Science Concepts Made Easy</span>
+      </div>
+      <div class="teach-item" data-aos="fade-up" data-aos-delay="150">
+        <div class="teach-icon"><i class="fas fa-calculator"></i></div>
+        <span>Math Foundations</span>
+      </div>
+      <div class="teach-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="teach-icon"><i class="fas fa-tasks"></i></div>
+        <span>School Homework Support</span>
+      </div>
+      <div class="teach-item teach-wide" data-aos="fade-up" data-aos-delay="250">
+        <div class="teach-icon"><i class="fas fa-comments"></i></div>
+        <span>Confidence in Communication</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     WHO IS THIS FOR
+============================== -->
+<section class="who-for">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <span class="tag">Who Is This For</span>
+      <h2 class="title">Ideal For <span>Students &amp; Families</span></h2>
+      <p class="sub">Our programs are designed for children who need targeted support, clarity, and confidence to thrive.</p>
+    </div>
+    <div class="who-grid">
+      <div class="who-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="who-num">1</div>
+        <div>
+          <h4>Students Struggling with English</h4>
+          <p>Build reading, speaking and writing confidence step by step in a supportive, pressure-free environment.</p>
+        </div>
+      </div>
+      <div class="who-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="who-num">2</div>
+        <div>
+          <h4>Kids Needing Concept Clarity in Science / Math</h4>
+          <p>We break down complex topics into simple, memorable lessons that make school feel easier.</p>
+        </div>
+      </div>
+      <div class="who-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="who-num">3</div>
+        <div>
+          <h4>Parents Looking for Structured Learning</h4>
+          <p>Organised sessions with clear goals, consistent progress, and regular feedback from the teacher.</p>
+        </div>
+      </div>
+      <div class="who-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="who-num">4</div>
+        <div>
+          <h4>Students Who Lack Confidence in Speaking</h4>
+          <p>We create a safe, encouraging space where every child feels heard and grows stronger each session.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -671,9 +771,9 @@
           <h3>Online Tutoring for International Batches</h3>
         </div>
         <div class="prog-body">
-          <p>Affordable international online tutoring starting at just $10 per hour. Quality education accessible to students everywhere, regardless of location or time zone.</p>
+          <p>Affordable international online tutoring starting at just $12.99 per hour. Quality education accessible to students everywhere, regardless of location or time zone.</p>
           <div class="prog-foot">
-            <div class="price">$10 <span>/ hour</span></div>
+            <div class="price">$12.99 <span>/ hour</span></div>
             <a href="#contact" class="prog-btn">Enroll <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -924,7 +1024,7 @@
 
       <div class="faq-item">
         <div class="faq-q" onclick="faqToggle(this)">How much do sessions cost? <i class="fas fa-chevron-down"></i></div>
-        <div class="faq-a"><p>Tutoring and English communication classes start at $18.99 per session. Psychological counseling is $21.99. International batch tutoring starts as low as $10/hour. Contact us for package deals.</p></div>
+        <div class="faq-a"><p>Tutoring and English communication classes start at $18.99 per session. Psychological counseling is $21.99. International batch tutoring starts as low as $12.99/hour. Contact us for package deals.</p></div>
       </div>
 
       <div class="faq-item">
@@ -990,8 +1090,6 @@
           <a href="#" class="soc-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="soc-link" title="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="https://wa.me/19294351500" class="soc-link" title="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="soc-link" title="TikTok"><i class="fab fa-tiktok"></i></a>
-          <a href="#" class="soc-link" title="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
 
@@ -1094,7 +1192,6 @@
           <a href="#" class="soc-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="soc-link" title="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="https://wa.me/19294351500" class="soc-link" title="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="soc-link" title="TikTok"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
       <div class="f-col">
