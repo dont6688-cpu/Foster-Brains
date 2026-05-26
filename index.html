@@ -1153,7 +1153,7 @@
 
         <form id="contactForm" novalidate>
           <!-- Web3Forms config -->
-          <input type="hidden" name="access_key" value="YOUR_KEY_HERE">
+          <!-- access_key is kept server-side via Vercel env var WEB3FORMS_KEY -->
           <input type="hidden" name="subject"     value="New Inquiry – Foster Brains Website">
           <input type="hidden" name="from_name"   value="Foster Brains Website">
           <input type="hidden" name="redirect"    value="false">
@@ -1462,8 +1462,6 @@ form.addEventListener('submit', async e => {
   /* spam trap */
   if (document.querySelector('[name="botcheck"]').checked) return;
 
-  const accessKey = form.querySelector('[name="access_key"]').value.trim();
-
   btn.disabled          = true;
   btnTxt.textContent    = 'Sending…';
   btnIcon.className     = 'fas fa-spinner fa-spin';
@@ -1478,14 +1476,10 @@ form.addEventListener('submit', async e => {
   };
 
   try {
-    /* ---- attempt Web3Forms delivery ---- */
-    if (!accessKey || accessKey === 'YOUR_KEY_HERE') throw new Error('no-key');
-
-    const res    = await fetch('https://api.web3forms.com/submit', {
+    const res    = await fetch('/api/contact', {
       method:  'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
-        access_key:         accessKey,
         subject:            'Foster Brains Inquiry: ' + payload.subject,
         from_name:          payload.name,
         email:              payload.email,
