@@ -354,6 +354,25 @@
     .scroll-top:hover{background:var(--gold);color:var(--navy)}
 
     /* ============================
+       AGE PROGRAM CARDS (new)
+    ============================ */
+    .age-prog-sec{background:#eef2ff}
+    .age-prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+    .age-prog-card{background:#fff;border-radius:var(--rl);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border);transition:var(--tr);display:flex;flex-direction:column}
+    .age-prog-card:hover{transform:translateY(-7px);box-shadow:0 22px 60px rgba(13,27,62,.15)}
+    .age-prog-img{height:175px;display:flex;align-items:center;justify-content:center;font-size:72px;flex-shrink:0}
+    .api-young{background:linear-gradient(135deg,#fff8e1,#ffe082)}
+    .api-smart{background:linear-gradient(135deg,#e3f2fd,#90caf9)}
+    .api-focus{background:linear-gradient(135deg,#fce4ec,#f48fb1)}
+    .age-prog-body{padding:22px;display:flex;flex-direction:column;flex:1}
+    .age-prog-lbl{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);font-size:.73rem;font-weight:700;padding:4px 14px;border-radius:50px;margin-bottom:14px;width:fit-content}
+    .age-prog-list{margin-bottom:20px;flex:1;display:flex;flex-direction:column;gap:8px}
+    .age-prog-list li{font-size:.83rem;color:var(--text-mid);display:flex;align-items:center;gap:8px}
+    .age-prog-list li::before{content:'•';color:var(--gold);font-weight:900;font-size:1.1rem;line-height:1}
+    .age-prog-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;background:var(--navy);color:#fff;border-radius:9px;font-size:.85rem;font-weight:600;transition:var(--tr)}
+    .age-prog-btn:hover{background:var(--navy-light);box-shadow:0 6px 18px rgba(13,27,62,.28)}
+
+    /* ============================
        WHAT WE TEACH
     ============================ */
     .what-teach{background:var(--cream)}
@@ -386,6 +405,7 @@
       .hero-visual{display:none}
       .prog-grid{grid-template-columns:repeat(2,1fr)}
       .age-grid{grid-template-columns:repeat(2,1fr)}
+      .age-prog-grid{grid-template-columns:repeat(2,1fr)}
       .testi-grid{grid-template-columns:repeat(2,1fr)}
       .footer-grid{grid-template-columns:1fr 1fr}
       .psych-grid{grid-template-columns:1fr}
@@ -409,6 +429,7 @@
       .cta-banner h2{max-width:100%}
       .teach-list,.who-grid{grid-template-columns:1fr}
       .teach-wide{grid-column:span 1}
+      .age-prog-grid{grid-template-columns:1fr}
     }
     @media(max-width:480px){
       section{padding:46px 0}
@@ -784,37 +805,62 @@
 </section>
 
 <!-- ==============================
-     AGE PATHWAYS
+     AGE PROGRAM CARDS
 ============================== -->
-<section class="age-sec">
+<section class="age-prog-sec">
   <div class="container">
     <div class="text-center" data-aos="fade-up">
-      <span class="tag">Programs by Age</span>
-      <h2 class="title">Learning Pathways for <span>Every Stage</span></h2>
-      <p class="sub">Because every child learns differently — tailored programs for each developmental stage.</p>
+      <span class="tag">Our Programs</span>
+      <h2 class="title">Programs for Every Age &amp; <span>Learning Need</span></h2>
+      <p class="sub">Tailored learning paths designed for each stage of your child's growth — from curious beginners to focused achievers.</p>
     </div>
-    <div class="age-grid">
-      <div class="age-card ac-young" data-aos="fade-up" data-aos-delay="50">
-        <span class="age-lbl">Young Learners</span>
-        <span class="age-emoji">👧</span>
-        <h3>Young Learners Program</h3>
-        <div class="age-range">Ages 7 – 9</div>
-        <p>Building the foundation with fun, engaging lessons designed to spark curiosity and a love for learning at an early age.</p>
+    <div class="age-prog-grid">
+
+      <!-- Ages 7–10 -->
+      <div class="age-prog-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="age-prog-img api-young">👧</div>
+        <div class="age-prog-body">
+          <span class="age-prog-lbl">Ages 7 – 10</span>
+          <ul class="age-prog-list">
+            <li>English Foundations</li>
+            <li>Basic Science</li>
+            <li>Math Basics</li>
+            <li>Creative Learning Activities</li>
+          </ul>
+          <a href="#contact" class="age-prog-btn"><i class="fas fa-arrow-right"></i> Learn More</a>
+        </div>
       </div>
-      <div class="age-card ac-smart" data-aos="fade-up" data-aos-delay="100">
-        <span class="age-lbl">Smart Scholar</span>
-        <span class="age-emoji">👦</span>
-        <h3>Smart Scholar Program</h3>
-        <div class="age-range">Ages 10 – 14</div>
-        <p>Developing critical thinking, English fluency, and academic excellence during these crucial formative years of education.</p>
+
+      <!-- Ages 10–14 -->
+      <div class="age-prog-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="age-prog-img api-smart">👦</div>
+        <div class="age-prog-body">
+          <span class="age-prog-lbl">Ages 10 – 14</span>
+          <ul class="age-prog-list">
+            <li>Science Concepts</li>
+            <li>English Communication</li>
+            <li>Math Skills Development</li>
+            <li>Academic Writing</li>
+          </ul>
+          <a href="#contact" class="age-prog-btn"><i class="fas fa-arrow-right"></i> Learn More</a>
+        </div>
       </div>
-      <div class="age-card ac-teen" data-aos="fade-up" data-aos-delay="150">
-        <span class="age-lbl">Teen Pathway</span>
-        <span class="age-emoji">🎓</span>
-        <h3>Teen Skill Pathway</h3>
-        <div class="age-range">Ages 15 – 18</div>
-        <p>Preparing teenagers for higher education and global opportunities with advanced communication and academic skills.</p>
+
+      <!-- Special Focus -->
+      <div class="age-prog-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="age-prog-img api-focus">🎯</div>
+        <div class="age-prog-body">
+          <span class="age-prog-lbl">Special Focus Programs</span>
+          <ul class="age-prog-list">
+            <li>Spoken English</li>
+            <li>Confidence Building</li>
+            <li>School Support</li>
+            <li>Exam Preparation</li>
+          </ul>
+          <a href="#contact" class="age-prog-btn"><i class="fas fa-arrow-right"></i> Learn More</a>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
